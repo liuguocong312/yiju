@@ -1,0 +1,24 @@
+diff a/src/components/join/index.vue b/src/components/join/index.vue	(rejected hunks)
+@@ -33,6 +33,22 @@
+             if(this.count<=0)
+               return
+             this.count--;
++=======
++            this.rightArrow+=-44;
++            this.$refs.main.style.marginLeft=this.rightArrow+'px'
++            console.log(this.rightArrow)
++            return  this.rightArrow
++
++          },
++          left(){
++            if(this.rightArrow==0){
++              return false
++            }else{
++              let num=this.leftArrow+this.rightArrow;
++              this.$refs.main.style.marginLeft=num+'px'
++              return this.rightArrow=num
++            }
++>>>>>>> cebdb6edee6c60a765b55b947becb5b5355c8260
+ 
+           },
+         },
